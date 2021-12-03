@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    font-family: 'Hammersmith One', sans-serif;
+}
+.grid-layout {
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 2fr 1fr;
+grid-template-areas:
+"one one one"
+"two two two"
+"three three three"
+"four four four"
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  p {
+    align-self: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #fff3b0;
+  }
+
+  .leaf {
+    width: 20%; 
+    display: flex;
+    }
+
+  
+.one {
+    display: flex;
+    background-color: #e09f3e  ;
+    justify-content: center;
+    grid-area: one;
+}
+
+.two {
+    display: flex;
+    background: white; 
+    padding: 10px;
+    grid-area: two;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+
+  }
+
+  ul li {
+    list-style: none;
+    margin: 1rem;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #540b0e;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: 400ms;
+  }
+
+  ul li a:hover {
+    background-color: #9e2a2b;
+  }
+
+.three {
+    display: flex; 
+    background: white;
+    grid-area: three;
+}
+
+form {
+    display: flex; 
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #404C24;
+  }
+
+  fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 100%;
+  }
+
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #fff3b0;
+
+  }
+
+  input::before { 
+    border: transparent;
+  }
+
+  input{
+    display: flex; 
+    align-items: center;
+    border: 2px solid transparent;
+    transition: all 400ms;
+    margin-bottom: 30px;
+    height: 50px;
+    padding: 10px;
+    width: 95%;
+  }
+
+  input:hover, input:focus {
+    border: 2px solid #e09f3e;
+    transition: 400ms;
+  } 
+
+  label {
+    padding: 5px; 
+    padding-bottom: 15px;
+    color: #fff3b0;
+    }
+
+    input::placeholder {
+        color: lightgray;
+        font-size: 1rem;
+    }
+
+    button { 
+        padding: 10px; 
+        color: 404C24; 
+        background: linear-gradient(to right, #e09f3e 10%, #fff3b0);
+        font-size: 1.6rem;
+        text-align: center;
+        border: 5px;
+        border-radius: 5px;;
+        border: transparent;
+        width: 100%;
+        transition: 1s ease;
+        height: 50px;
+        }
+
+button:hover, button:focus {
+background: linear-gradient(to right, #e09f3e 100%, #fff3b0);
+ transition: 1s ease;
+  }      
+        
+.four {
+    display: flex;
+    background: #e09f3e; 
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    grid-area: four;
+}
+
+@media screen and (min-width: 860px){
+
+    .grid-layout {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 0.7fr 0.9fr 0.9fr 0.7fr;
+        grid-template-areas:
+        "one one one"
+        "two three three"
+        "two three three"
+        "four four four"
+        }
+        
+        .one {
+            grid-area: one;
+        }
+        
+        .two {
+            grid-area: two;
+           
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+          }
+   
+
+        .three {
+            grid-area: three;
+        }
+        
+        .four {
+            grid-area: four;
+        }
+
+}
+
